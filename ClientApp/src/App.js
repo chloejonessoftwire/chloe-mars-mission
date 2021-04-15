@@ -30,12 +30,15 @@ const App = () =>  {
     return (
       <div className={darkTheme? 'dark-theme' : 'light-theme'}>
         <Layout>
+          <div className='toggle-switch-div'>
+            <ToggleSwitch id="toggleSwitch" checked={darkTheme} onChange={() => setDarkTheme(prevTheme => !prevTheme)} Name='dark-mode' data-yes="Dark" data-no="Light"/>
+            <p> Dark Mode </p>
+          </div>
           <Route exact path='/' component={Home} />
           <Route path='/counter' component={Counter} />
           <AuthorizeRoute path='/fetch-data' component={FetchData} />
           <Route path={ApplicationPaths.ApiAuthorizationPrefix} component={ApiAuthorizationRoutes} />
         </Layout>
-        <ToggleSwitch id="toggleSwitch" checked={darkTheme} onChange={() => setDarkTheme(prevTheme => !prevTheme)} Name='dark-mode' data-yes="Dark" data-no="Light"/>
       </div>
     );
 }

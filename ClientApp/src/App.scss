@@ -1,53 +1,65 @@
 $light-orange:  rgb(255, 168, 117);
+$light-pink: #fab7e4;
+
 body {
     margin: 0;
     /* text-align: center; */
 }
   
-  .light-theme {
-    background-color: #fff;
-    color: #444444;
+.light-theme {
+  background-color: #fff;
+  color: #444444;
 }
   
+nav {
+  display: flex;
+  text-align: center;
+  background-color: $light-pink;
+  width: 100%;
+  padding: 20px;
+  color: #f8f8f8;
+}
+.navbar-toggler{
+  background-color: #f8f8f8;
+}
+
+.toggle-switch-div {
+  float: right;
+  display: block;
+}
+  
+.dark-theme {
+  background-color: #1f1b24;
+  color: #f8f8f8;
   nav {
-    display: flex;
-    text-align: center;
-    background-color: #fab7e4;
-    width: 100%;
-    padding: 20px;
-    color: #f8f8f8;
-}
+    background-color: #332940;
+  }
+  .navbar-light .navbar-brand {
+    color: white;
+  }
+  code {
+    color: $light-orange;
+  }
+  .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
+    color: $light-orange;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: rgb(89, 205, 226);
+  }
+    
+  .navbar-light .navbar-nav .nav-link.disabled {
+    color: rgba(253, 23, 23, 0.959);
+  } 
+  .text-dark {
+    color: white !important;
+  }
+  a.text-dark:hover, a.text-dark:focus {
+    color: $light-orange !important;
+  }
+  .navbar-toggler{
+    background-color: rgba(221, 154, 235, 0.774);
+  }
   
-  .dark-theme {
-    background-color: #1f1b24;
-    color: #f8f8f8;
-    nav {
-      background-color: #332940;
-    }
-    .navbar-light .navbar-brand {
-      color: white;
-    }
-    code {
-      color: $light-orange;
-    }
-    .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
-      color: $light-orange;
-    }
-    .navbar-light .navbar-nav .nav-link {
-      color: rgb(89, 205, 226);
-    }
-      
-    .navbar-light .navbar-nav .nav-link.disabled {
-      color: rgba(253, 23, 23, 0.959);
-    } 
-    .text-dark {
-      color: white !important;
-    }
-    a.text-dark:hover, a.text-dark:focus {
-      color: $light-orange !important;
-    }
-    
-    
 }
   
 

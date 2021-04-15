@@ -12,7 +12,6 @@ class ToggleSwitch extends Component {
           id={this.props.Name}
           checked={this.props.checked}
           onChange={this.props.onChange}
-
         />
         <label className="toggle-switch-label" htmlFor={this.props.Name}>
           <span className="toggle-switch-inner" />
