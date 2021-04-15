@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import { Route } from 'react-router';
 import { Layout } from './components/Layout';
 import { Home } from './components/Home';
@@ -11,14 +11,29 @@ import { ApplicationPaths } from './components/api-authorization/ApiAuthorizatio
 import './custom.css'
 import './App.scss'
 
-export default class App extends Component {
+// export default class App extends Component {
   // const [darkTheme, setDarkTheme] = React.useState(false)
-  static displayName = App.name;
+  // static displayName = App.name;
 
-  render () {
+  // render () {
+const App = () =>  {
+  const [darkTheme, setDarkTheme] = useState(getDefaultTheme);
+  useEffect(() => {
+    localStorage.setItem('dark', JSON.stringify(darkTheme))
+  }, [darkTheme])
+  function getDefaultTheme() {
+    const selectedTheme = JSON.parse(localStorage.getItem('dark'))
+    return selectedTheme || false
+  }
+
     return (
-      <div className='light-theme'>
+      <div className={darkTheme? 'dark-theme' : 'light-theme'}>
         <Layout>
+          <div className='button-container'>
+            <button onClick={() => setDarkTheme(prevTheme => !prevTheme)}>
+              Toggle Theme
+            </button>
+          </div>
           <Route exact path='/' component={Home} />
           <Route path='/counter' component={Counter} />
           <AuthorizeRoute path='/fetch-data' component={FetchData} />
@@ -26,5 +41,5 @@ export default class App extends Component {
         </Layout>
       </div>
     );
-  }
 }
+export default App;
