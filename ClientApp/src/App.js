@@ -31,7 +31,7 @@ const App = () =>  {
         <Layout>
           <div className='toggle-switch-div'>
             <ToggleSwitch id="toggleSwitch" checked={darkTheme} onChange={() => setDarkTheme(prevTheme => !prevTheme)} Name='dark-mode' data-yes="Dark" data-no="Light"/>
-            <p> Dark Mode </p>
+            <p text-align="center" >Dark Mode</p>
           </div>
           <Route exact path='/' component={Home} />
           <Route path='/counter' component={Counter} />

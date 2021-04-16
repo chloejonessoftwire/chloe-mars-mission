@@ -1,0 +1,33 @@
+
+.weather-widget{
+    text-align: center;
+}
+.weather-widget iframe {
+    width: 800px;
+    height: 530px;
+}
+@media screen and (min-width: 999px){
+    .weather-widget iframe {
+        width: 800px;
+        height: 530px;
+    }    
+}
+@media screen and (min-width: 650px) and (max-width: 1000px){
+    .weather-widget iframe {
+        width: 600px;
+        height: 400px;
+    }
+}
+@media screen and (min-width: 490px) and (max-width: 651px){
+    .weather-widget iframe {
+        width: 400px;
+        height: 400px;
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 491px){
+    .weather-widget iframe {
+        width: 300px;
+        height: 400px;
+    }
+}
+    

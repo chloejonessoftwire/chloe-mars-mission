@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Home.scss'
 
 export class Home extends Component {
   static displayName = Home.name;
@@ -13,6 +14,9 @@ export class Home extends Component {
           <li><a href='https://facebook.github.io/react/'>React</a> for client-side code</li>
           <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
         </ul>
+        <div className='weather-widget'>
+          <iframe src='https://mars.nasa.gov/layout/embed/image/insightweather/' scrolling='no' frameborder='0'></iframe>
+        </div>
         <p>To help you get started, we have also set up:</p>
         <ul>
           <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>
