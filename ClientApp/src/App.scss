@@ -1,13 +1,16 @@
 $light-orange:  rgb(255, 168, 117);
-$light-pink: #fab7e4;
+$light-pink: #f5bac9;
+
+.hide {
+  display: none;
+}
 
 body {
-    margin: 0;
-    /* text-align: center; */
+  margin: 0;
 }
   
 .light-theme {
-  background-color: #fff;
+  background-image: linear-gradient( #fdcef721, #d6b29c, #d6b29c);
   color: #444444;
 }
   
@@ -19,6 +22,7 @@ nav {
   padding: 20px;
   color: #f8f8f8;
 }
+
 .navbar-toggler{
   background-color: #f8f8f8;
 }
@@ -29,7 +33,7 @@ nav {
 }
   
 .dark-theme {
-  background-color: #1f1b24;
+  background-image: linear-gradient( #99278afa, #000000, #000000);
   color: #f8f8f8;
   nav {
     background-color: #332940;

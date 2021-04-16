@@ -4,6 +4,8 @@ import { Layout } from './components/Layout';
 import { Home } from './components/Home';
 import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
+import { FooterLight } from './components/FooterLight.js';
+import { FooterDark } from './components/FooterDark.js';
 import AuthorizeRoute from './components/api-authorization/AuthorizeRoute';
 import ApiAuthorizationRoutes from './components/api-authorization/ApiAuthorizationRoutes';
 import ToggleSwitch from './ToggleSwitch/ToggleSwitch'
@@ -13,12 +15,9 @@ import './custom.css'
 import './App.scss'
 import './ToggleSwitch/ToggleSwitch.scss'
 
-
 const App = () =>  {
   const [darkTheme, setDarkTheme] = useState(getDefaultTheme);
-  const [toggle, setToggle] = useState(false);
-  let [checked, setChecked] = useState(false);
-
+ 
   useEffect(() => {
     localStorage.setItem('dark', JSON.stringify(darkTheme))
   }, [darkTheme])
@@ -39,6 +38,12 @@ const App = () =>  {
           <AuthorizeRoute path='/fetch-data' component={FetchData} />
           <Route path={ApplicationPaths.ApiAuthorizationPrefix} component={ApiAuthorizationRoutes} />
         </Layout>
+        <div  className={darkTheme? 'hide' : 'display'}>
+          <FooterLight/>
+        </div>
+        <div className={darkTheme? 'display' : 'hide'}>
+          <FooterDark />
+        </div>
       </div>
     );
 }

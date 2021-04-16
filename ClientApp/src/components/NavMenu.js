@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Twirl as Hamburger } from 'hamburger-react';
 import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { LoginMenu } from './api-authorization/LoginMenu';
