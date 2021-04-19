@@ -1,0 +1,163 @@
+@import './src/colours.scss';
+
+@mixin roverstyle { 
+    width: 90%;
+    max-width: 500px;
+    margin:auto;
+    text-align: center;
+    background-color:$light-theme-card-background;
+    border-radius: 25px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    border: 5px solid $light-theme-border;
+    padding: 3px;
+    padding-bottom: 15px; 
+    box-shadow: 0px 0px 20px 20px $light-theme-glow;
+    
+}
+
+@mixin iconstyle{
+    border-radius: 50%; 
+    border: 5px solid $light-theme-border;
+}
+.imageicons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 18px;
+}
+
+.selected-icon {
+    @include iconstyle;
+    border-color: $light-theme-selected-border;
+    
+}
+.unselected-icon{
+    @include iconstyle;
+}
+
+.selected-pic {
+    @include roverstyle;
+}
+
+.un-selectedpic {
+    display: none;
+}
+
+.roverImage{
+    border: 6px solid $light-theme-selected-border;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 200px;
+    height: 200px;
+}
+
+.roverTable{
+    background-color: $light-theme-table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    font-size: small;
+}
+
+tr:nth-child(even){
+    background-color: $light-theme-card-background;
+}
+table, th, td {
+    border-collapse:collapse;
+    border: 1px solid $light-theme-table-border;
+}
+.top-page-break{
+    padding-bottom: 80px;
+}
+.dark-theme{
+    .selected-pic {
+        background-color:$dark-theme-card-background;
+        border: 5px solid $dark-theme-border;
+        box-shadow: 0px 0px 20px 20px $dark-theme-glow;
+    }
+    .un-selectedpic{
+        background-color:$dark-theme-card-background;
+        border: 5px solid $dark-theme-border;
+        box-shadow: 0px 0px 20px 20px $dark-theme-glow;
+    }
+    .unselected-icon{
+        border: 5px solid $dark-theme-unselected-border;
+    }
+    .selected-icon {   
+        border-color: $dark-theme-selected-border;
+    }
+    .roverImage{
+        border: 6px solid $dark-theme-selected-border;
+    }
+    
+    .roverTable{
+        background-color: $dark-theme-table;
+    }
+    
+    tr:nth-child(even){
+        background-color: $dark-theme-table-alt;
+    }
+    table, th, td {
+        border: 1px solid $dark-theme-table-border;
+    }
+ 
+}
+@media screen and (min-width:600px) and (max-width:1201px){
+    .selected-icon{
+        width: 150px;
+        height: 150px;
+    }
+    .unselected-icon{
+        width: 150px;
+        height: 150px;
+    }
+}
+@media screen and (min-width:1000px) and (max-width:1201px){
+    .imageicons{
+        justify-content: center;
+    }
+    .selected-icon{
+       margin-left: 10px;
+       margin-right: 10px; 
+    }
+    .unselected-icon{
+        margin-left: 10px;
+        margin-right: 10px;  
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .un-selectedpic {
+        @include roverstyle;
+        display: inline-block;
+        width: 33%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .selected-pic {
+        display: inline-block;
+        width: 33%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .imageicons {
+        display: none;
+    }
+    .roverImage{
+        width: 250px;
+        height: 250px;  
+    }
+    .roverCards{
+        justify-content: space-between;
+        display: flex;
+    }
+    
+}
+ 

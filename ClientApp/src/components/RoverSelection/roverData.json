@@ -1,0 +1,49 @@
+{ 
+  "curiosity": {
+    "name": "Curiosity",
+    "imagesrc": "https://s3.amazonaws.com/www-inside-design/uploads/2018/09/mars-rover-square-810x810.jpg",
+    "launchdate":"26/11/2011",
+    "speed": "0.09 mph",
+    "speedstars": "https://codeahoy.com/assets/images/compare/ratings/2_stars.png",
+    "size": "630 cubic feet",
+    "sizestars":"https://codeahoy.com/assets/images/compare/ratings/1_stars.png",
+    "lifespan": "98 weeks",
+    "lifespanstars":"https://codeahoy.com/assets/images/compare/ratings/2_stars.png",
+    "numberofcameras": 7,
+    "numberofcamerasstars": "https://codeahoy.com/assets/images/compare/ratings/4_stars.png", 
+    "weight": "899 kg",
+    "weightstars": "https://codeahoy.com/assets/images/compare/ratings/1_stars.png"
+  },
+
+  "opportunity": {
+    "name": "Opportunity",
+    "imagesrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/NASA_Mars_Rover.jpg/1200px-NASA_Mars_Rover.jpg",
+    "launchdate": "07/07/2003",
+    "speed": "0.1mph",
+    "speedstars": "https://codeahoy.com/assets/images/compare/ratings/3_stars.png",
+    "size": "190 cubic feet",
+    "sizestars": "https://codeahoy.com/assets/images/compare/ratings/4_stars.png",
+    "lifespan": "785 weeks",
+    "lifespanstars": "https://codeahoy.com/assets/images/compare/ratings/5_stars.png",
+    "numberofcameras": 5,
+    "numberofcamerasstars": "https://codeahoy.com/assets/images/compare/ratings/3_stars.png",
+    "weight":"180 kg", 
+    "weightstars": "https://codeahoy.com/assets/images/compare/ratings/4_stars.png"
+  },
+
+  "spirit": {
+    "name": "Spirit",
+    "imagesrc": "https://brownspaceman.com/wp-content/uploads/2014/01/spirit-rover.jpg",
+    "launchdate": "10/06/2003",
+    "speed": "0.1mph",
+    "speedstars": "https://codeahoy.com/assets/images/compare/ratings/3_stars.png",
+    "size": "190 cubic feet",
+    "sizestars": "https://codeahoy.com/assets/images/compare/ratings/4_stars.png",
+    "lifespan": "324 weeks",
+    "lifespanstars": "https://codeahoy.com/assets/images/compare/ratings/4_stars.png",
+    "numberofcameras": 5,
+    "numberofcamerasstars": "https://codeahoy.com/assets/images/compare/ratings/3_stars.png",
+    "weight":"180 kg", 
+    "weightstars": "https://codeahoy.com/assets/images/compare/ratings/4_stars.png"
+  }
+}
