@@ -6,7 +6,6 @@ import './Home.scss'
 function Home() {
   return (
     <div>
-      <h1>Hello, world!</h1>
       <APOD />
       <p>Welcome to your new single-page application, built with:</p>
       <ul>
@@ -14,6 +13,7 @@ function Home() {
         <li><a href='https://facebook.github.io/react/'>React</a> for client-side code</li>
         <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
       </ul>
+      <h2>Weather on Mars</h2>
       <div className='weather-widget'>
         <iframe src='https://mars.nasa.gov/layout/embed/image/insightweather/' scrolling='no' frameborder='0'></iframe>
       </div>

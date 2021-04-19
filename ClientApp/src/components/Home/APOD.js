@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import './APOD.scss'
+
 function APOD() {
     const [pictureData, setPictureData] = useState(null);
 
@@ -16,22 +18,26 @@ function APOD() {
 
     if (pictureData.media_type == "video") {
         return (
-            <div className='postOTDContainer'>
+            <div className='APODContainer'>
                 <h2 className='featureTitle'>Nasa&apos;s feature of the day!</h2>
-                <p className='postTitle'>{pictureData.title}</p>
-                <iframe className='postOTD' width="320" height="240"
-                    src={pictureData.url} >
-                </iframe>
+                <p className='APODTitle'>{pictureData.title}</p>
+                <div className='APODPostContainer'>
+                    <iframe className='APODPost' width="320" height="240"
+                        src={pictureData.url} >
+                    </iframe>
+                </div>
                 <p className='explainOTD'>{pictureData.explanation}</p>
             </div>
         )
     } else if (pictureData.media_type == "image") {
         return (
-            <div className='postOTDContainer'>
+            <div className='APODContainer'>
                 <h2 className='featureTitle'>Nasa&apos;s feature of the day!</h2>
-                <p className='postTitle'>{pictureData.title}</p>
-                <img className='postOTD' src={pictureData.url} width="320" />
-                <p className='explainOTD'>{pictureData.explanation}</p>
+                <p className='APODTitle'>{pictureData.title}</p>
+                <div className='APODPostContainer'>
+                    <img className='APODPost' src={pictureData.url} width="320" />
+                </div>
+                <p className='APODExplanation'>{pictureData.explanation}</p>
             </div>
         )
     }
