@@ -1,11 +1,11 @@
 import React, { Component, useState, useEffect } from 'react';
 import { Route } from 'react-router';
 import { Layout } from './components/Layout';
-import { Home } from './components/Home';
+import { Home } from './components/Home/Home';
 import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
-import { FooterLight } from './components/FooterLight.js';
-import { FooterDark } from './components/FooterDark.js';
+import { FooterLight } from './components/Footer/FooterLight.js';
+import { FooterDark } from './components/Footer/FooterDark.js';
 import AuthorizeRoute from './components/api-authorization/AuthorizeRoute';
 import ApiAuthorizationRoutes from './components/api-authorization/ApiAuthorizationRoutes';
 import ToggleSwitch from './ToggleSwitch/ToggleSwitch'
