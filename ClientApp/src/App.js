@@ -5,6 +5,7 @@ import { Home } from './components/Home/Home';
 import { RoverSelection } from './components/RoverSelection/RoverSelection';
 import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
+import { News } from './components/News/News';
 import { FooterLight } from './components/Footer/FooterLight.js';
 import { FooterDark } from './components/Footer/FooterDark.js';
 import AuthorizeRoute from './components/api-authorization/AuthorizeRoute';
@@ -37,6 +38,7 @@ const App = () =>  {
           <Route exact path='/' component={Home} />
           <Route path='/counter' component={Counter} />
           <Route path='/rovers' component={RoverSelection}/>
+          <Route path='/news' component={News}/>
                     <AuthorizeRoute path='/fetch-data' component={FetchData} />
           <Route path={ApplicationPaths.ApiAuthorizationPrefix} component={ApiAuthorizationRoutes} />
         </Layout>
