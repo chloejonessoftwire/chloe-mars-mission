@@ -1,5 +1,6 @@
 import React, { Component, useState, useEffect } from 'react';
 import { Route } from 'react-router';
+import { Link } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { Home } from './components/Home/Home';
 import { RoverSelection } from './components/RoverSelection/RoverSelection';
@@ -38,8 +39,8 @@ const App = () =>  {
           <Route exact path='/' component={Home} />
           <Route path='/counter' component={Counter} />
           <Route path='/rovers' component={RoverSelection}/>
-          <Route path='/news' component={News} theme={darkTheme} />
-                    <AuthorizeRoute path='/fetch-data' component={FetchData} />
+          <Route path='/news' component={News} />
+          <AuthorizeRoute path='/fetch-data' component={FetchData} />
           <Route path={ApplicationPaths.ApiAuthorizationPrefix} component={ApiAuthorizationRoutes} />
         </Layout>
         <div  className={darkTheme? 'hide' : 'display'}>
