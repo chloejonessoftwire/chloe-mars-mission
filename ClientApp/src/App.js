@@ -38,7 +38,7 @@ const App = () =>  {
           <Route exact path='/' component={Home} />
           <Route path='/counter' component={Counter} />
           <Route path='/rovers' component={RoverSelection}/>
-          <Route path='/news' component={News}/>
+          <Route path='/news' component={News} theme={darkTheme} />
                     <AuthorizeRoute path='/fetch-data' component={FetchData} />
           <Route path={ApplicationPaths.ApiAuthorizationPrefix} component={ApiAuthorizationRoutes} />
         </Layout>
@@ -51,5 +51,4 @@ const App = () =>  {
       </div>
     );
 }
-
 export default App;

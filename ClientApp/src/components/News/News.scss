@@ -1,0 +1,15 @@
+.twitter-feeds{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+}
+.twitter-feed{
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.dark-theme {
+    .timeline-Widget{
+        theme: "dark";
+    }
+}
