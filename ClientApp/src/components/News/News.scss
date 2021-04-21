@@ -1,3 +1,5 @@
+@import './src/colours.scss';
+
 .twitter-feeds{
     width: 100%;
     display:flex;
@@ -6,9 +8,29 @@
 .twitter-feed{
     padding-left: 4px;
     padding-right: 4px;
+    margin-bottom: 45px;
+    border-radius: 15px;
+    border: 2px solid $light-theme-border;
+    box-shadow: 0px 0px 20px 20px $light-theme-glow;
+    background-color: #ffffff;
+
 }
 
-.dark-theme {
-    .timeline-Widget{
+.dark-theme{
+    .twitter-feed {
+        border: 2px solid $dark-theme-border;
+        box-shadow: 0px 0px 20px 20px $dark-theme-glow;
+        background-color: #292f33;
     }
 }
+@media (max-width: 770px) {
+    .twitter-feeds{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .twitter-feed {
+        width: 100%;
+    }
+  }
+
+  

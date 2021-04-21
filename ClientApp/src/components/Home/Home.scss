@@ -3,9 +3,22 @@
 .weather-widget{
     text-align: center;
 }
+.roverMap {
+    text-align: center;
+}
 .weather-widget iframe {
     width: 800px;
     height: 530px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: $light-theme-border;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    margin-top:10px;
+    box-shadow: 0px 0px 40px 20px $light-theme-glow;
+}
+.roverMap iframe {
+    width: 90%;
     border-style: solid;
     border-width: 2px;
     border-color: $light-theme-border;
@@ -19,7 +32,12 @@
         border-color: $dark-theme-border;
         box-shadow: 0px 0px 20px 20px $dark-theme-glow;
     }
+    .roverMap iframe{
+        border-color: $dark-theme-border;
+        box-shadow: 0px 0px 20px 20px $dark-theme-glow;
+    }
 }
+
 @media screen and (min-width: 999px){
     .weather-widget iframe {
         width: 800px;
