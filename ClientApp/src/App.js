@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { Home } from './components/Home/Home';
 import { RoverSelection } from './components/RoverSelection/RoverSelection';
+import { Curiosity } from './components/Rovers/Curiosity';
+import { Opportunity } from './components/Rovers/Opportunity';
+import { Spirit } from './components/Rovers/Spirit';
 import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
 import { News } from './components/News/News';
@@ -17,6 +20,9 @@ import { ApplicationPaths } from './components/api-authorization/ApiAuthorizatio
 import './custom.css'
 import './App.scss'
 import './ToggleSwitch/ToggleSwitch.scss'
+import { Perseverance } from './components/Rovers/Perseverance';
+
+require('dotenv').config()
 
 const App = () =>  {
   const [darkTheme, setDarkTheme] = useState(getDefaultTheme);
@@ -38,7 +44,11 @@ const App = () =>  {
           </div>
           <Route exact path='/' component={Home} />
           <Route path='/counter' component={Counter} />
-          <Route path='/rovers' component={RoverSelection}/>
+          <Route exact path='/rovers' component={RoverSelection}/>
+          <Route exact path='/rovers/curiosity' component={Curiosity}/>
+          <Route exact path='/rovers/spirit' component={Spirit}/>
+          <Route exact path='/rovers/opportunity' component={Opportunity}/>
+          <Route exact path='/rovers/perseverance' component={Perseverance}/>
           <Route path='/news' component={() => <News theme={darkTheme}/>} />
           <AuthorizeRoute path='/fetch-data' component={FetchData} />
           <Route path={ApplicationPaths.ApiAuthorizationPrefix} component={ApiAuthorizationRoutes} />

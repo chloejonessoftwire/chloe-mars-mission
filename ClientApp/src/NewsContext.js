@@ -5,12 +5,11 @@ export const NewsContext = createContext();
 
 export const NewsContextProvider = (props) => {
     const [data, setData] = useState();
-    // const apiKey="6d17337f1f3a4268afd687a06ad1ba61";
-    const apiKey ="d3a68d3a93a54948a016a1553bc4d20c"
 
     useEffect(() => {
         axios.get(
-            `https://newsapi.org/v2/top-headlines?language=en&category=science&q=nasa&from=2021-03-21&sortBy=publishedAt&apiKey=${apiKey}`
+            // `https://newsapi.org/v2/top-headlines?language=en&category=science&q=nasa&from=2021-03-21&sortBy=publishedAt&apiKey=${process.env.REACT_APP_NEWS_API_KEY_2}`
+            `https://newsapi.org/v2/top-headlines?language=en&category=science&q=nasa&from=2021-03-21&sortBy=publishedAt&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
         )
         .then((response) => setData(response.data))
         .catch((error) => console.log(error));
