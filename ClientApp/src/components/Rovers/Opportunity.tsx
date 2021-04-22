@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import { RoverPhoto } from './RoverPhoto';
 
-
+import './Rovers.scss'
 
 function Opportunity() {
     const [opportunityPhotoData, setOpportunityPhotoData] = useState(null);
@@ -36,13 +36,15 @@ function Opportunity() {
     }
 
     return (
-        <div>
+        <div className='rover-page'>
+            <div className='top-page-break'/>
+            <h1> Opportunity Rover </h1>
+            {displayDataJsx} 
+            <h2> Find images form another date: </h2>
             <label className="rover-date-top-padding">
-                Date
                 <input className="rover-input-date" type="date" name="searchDate" onChange={e => setSearchDate(e.target.value)} />
                 <button className="rover-input-date" onClick={() => searchForNewDate()}>Search</button>
-            </label>
-            {displayDataJsx}
+            </label>  
         </div>
     )
 }

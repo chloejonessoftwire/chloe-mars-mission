@@ -36,7 +36,7 @@ export class NavMenu extends Component {
                   <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
                 </NavItem>
                 <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret tag={Link} to="/rovers" className="text-dark">
+                  <DropdownToggle nav caret className="text-dark">
                     Rovers
                     </DropdownToggle>
                   <DropdownMenu right>

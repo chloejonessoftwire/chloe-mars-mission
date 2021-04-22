@@ -2,6 +2,8 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import { RoverPhoto } from './RoverPhoto';
 
+import './Rovers.scss'
+
 function Curiosity() {
     const [curiosityPhotoData, setCuriosityPhotoData] = useState(null);
     const [searchDate, setSearchDate] = useState("2012-08-08");
@@ -39,13 +41,15 @@ function Curiosity() {
     }
 
     return (
-        <div>
+        <div className='rover-page'>
+            <div className='top-page-break'/>
+            <h1> Curiosity Rover </h1>
+            {displayDataJsx} 
+            <h2> Find images form another date: </h2>
             <label className="rover-date-top-padding">
-                Date
                 <input className="rover-input-date" type="date" name="searchDate" onChange={e => setSearchDate(e.target.value)} />
                 <button className="rover-input-date" onClick={() => searchForNewDate()}>Search</button>
-            </label>
-            {displayDataJsx}   
+            </label>  
         </div>
 
     )

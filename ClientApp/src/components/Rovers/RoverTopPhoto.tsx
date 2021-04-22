@@ -12,11 +12,11 @@ function RoverTopPhoto(props: RoverPhoto) {
         <div >
             <div className="top-rover-div">
                 <img className="img-rover-top" src={props.img_src} />
-                <p>
-                    Camera : {props.full_name} <br/>
+                <h5>
+                    Camera: {props.full_name} <br/>
                     Earth date : {props.earth_date} <br/>
-                    Sol : {props.sol} <br/>
-                </p>
+                    Sol Days on Mars: {props.sol} <br/>
+                </h5>
             </div>
         </div>
     )
