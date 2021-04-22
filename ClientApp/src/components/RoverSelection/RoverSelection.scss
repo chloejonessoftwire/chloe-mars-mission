@@ -12,8 +12,7 @@
     border: 5px solid $light-theme-border;
     padding: 3px;
     padding-bottom: 15px; 
-    box-shadow: 0px 0px 40px 5px $light-theme-glow;
-    
+    box-shadow: 0px 0px 40px 5px $light-theme-glow; 
 }
 
 @mixin iconstyle{
@@ -159,7 +158,6 @@ table, th, td {
         justify-content: space-between;
         display: flex;
         flex-wrap: wrap;
-    }
-    
+    }    
 }
  

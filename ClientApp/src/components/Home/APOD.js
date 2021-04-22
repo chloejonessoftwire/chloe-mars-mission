@@ -34,10 +34,12 @@ function APOD() {
             <div className='APODContainer'>
                 <h2 className='featureTitle'>Nasa&apos;s feature of the day!</h2>
                 <p className='APODTitle'>{pictureData.title}</p>
-                <div className='APODPostContainer'>
-                    <img className='APODPost' src={pictureData.url} width="320" />
+                <div className='APODImageText'>
+                    <div className='APODPostContainer'>
+                        <img className='APODPost' src={pictureData.url} width="320" />
+                    </div>
+                    <p className='APODExplanation'>{pictureData.explanation}</p>
                 </div>
-                <p className='APODExplanation'>{pictureData.explanation}</p>
             </div>
         )
     }
