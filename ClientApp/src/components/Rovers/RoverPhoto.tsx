@@ -16,7 +16,7 @@ function RoverPhoto(props: any) {
             </div>
             <div className="img-rover-restofimages">
             
-                {props.photoData.map((photo: any, index: any) => <img key={index} className="img-rover-photo-list" src={photo.img_src}
+                {props.photoData.map((photo: any, index: any) => <img key={index} className={clickedImage === photo ? 'selected-img-rover-photo-list': 'img-rover-photo-list'} src={photo.img_src}
                     onClick={() => setClickedImage(photo)} />)}
                
             </div>
