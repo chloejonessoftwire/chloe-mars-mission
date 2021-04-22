@@ -30,6 +30,7 @@
 .selected-icon {
     @include iconstyle;
     border-color: $light-theme-selected-border;
+    box-shadow: 0px 0px 40px 5px $light-theme-glow;
     
 }
 .unselected-icon{
@@ -90,6 +91,7 @@ table, th, td {
     }
     .selected-icon {   
         border-color: $dark-theme-selected-border;
+        box-shadow: 0px 0px 40px 5px $dark-theme-glow;
     }
     .roverImage{
         border: 6px solid $dark-theme-selected-border;

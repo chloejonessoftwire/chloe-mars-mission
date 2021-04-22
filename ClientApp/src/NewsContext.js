@@ -8,8 +8,8 @@ export const NewsContextProvider = (props) => {
 
     useEffect(() => {
         axios.get(
-            // `https://newsapi.org/v2/top-headlines?language=en&category=science&q=nasa&from=2021-03-21&sortBy=publishedAt&apiKey=${process.env.REACT_APP_NEWS_API_KEY_2}`
-            `https://newsapi.org/v2/top-headlines?language=en&category=science&q=nasa&from=2021-03-21&sortBy=publishedAt&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
+            // `https://newsapi.org/v2/top-headlines?language=en&category=science&q=nasa&sortBy=publishedAt&apiKey=${process.env.REACT_APP_NEWS_API_KEY_2}`
+            `https://newsapi.org/v2/top-headlines?language=en&category=science&q=nasa&sortBy=publishedAt&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
         )
         .then((response) => setData(response.data))
         .catch((error) => console.log(error));

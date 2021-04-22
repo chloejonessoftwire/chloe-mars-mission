@@ -10,8 +10,7 @@ function NewsArticle({data}) {
             <div className='news-image'>
                 <img src={data.urlToImage} width='90%' />
             </div>
-            <span> {data.author}|</span>
-            <span> {data.publishedAt}|</span>
+            <span> {data.publishedAt}  |</span>
             <span> {data.source.name}</span>
         </div>
     );
