@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "bootstrap": "^4.1.3",
+    "dotenv": "^8.2.0",
     "hamburger-react": "^2.4.0",
     "jquery": "^3.5.1",
     "merge": "^1.2.1",
