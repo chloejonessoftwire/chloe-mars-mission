@@ -52,6 +52,9 @@ export class LoginMenu extends Component {
             <NavItem>
                 <NavLink tag={Link} className="text-dark" to={logoutPath}>Logout</NavLink>
             </NavItem>
+            <NavItem>
+                <NavLink tag={Link} className="text-dark" to='/'>Back to site</NavLink>
+            </NavItem>
         </Fragment>);
 
     }
@@ -63,6 +66,9 @@ export class LoginMenu extends Component {
             </NavItem>
             <NavItem>
                 <NavLink tag={Link} className="text-dark" to={loginPath}>Login</NavLink>
+            </NavItem>
+            <NavItem>
+                <NavLink tag={Link} className="text-dark" to='/'>Back to site</NavLink>
             </NavItem>
         </Fragment>);
     }

@@ -7,9 +7,11 @@ import { RoverSelection } from './components/RoverSelection/RoverSelection';
 import { Curiosity } from './components/Rovers/Curiosity';
 import { Opportunity } from './components/Rovers/Opportunity';
 import { Spirit } from './components/Rovers/Spirit';
+import { Perseverance } from './components/Rovers/Perseverance';
 import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
 import { News } from './components/News/News';
+import { NasaTV } from './components/NasaTV/NasaTV';
 import { FooterLight } from './components/Footer/FooterLight.js';
 import { FooterDark } from './components/Footer/FooterDark.js';
 import AuthorizeRoute from './components/api-authorization/AuthorizeRoute';
@@ -20,7 +22,6 @@ import { ApplicationPaths } from './components/api-authorization/ApiAuthorizatio
 import './custom.css'
 import './App.scss'
 import './ToggleSwitch/ToggleSwitch.scss'
-import { Perseverance } from './components/Rovers/Perseverance';
 
 require('dotenv').config()
 
@@ -50,6 +51,7 @@ const App = () =>  {
           <Route exact path='/rovers/opportunity' component={Opportunity}/>
           <Route exact path='/rovers/perseverance' component={Perseverance}/>
           <Route path='/news' component={() => <News theme={darkTheme}/>} />
+          <Route exact path='/nasa-tv' component={NasaTV}/>
           <AuthorizeRoute path='/fetch-data' component={FetchData} />
           <Route path={ApplicationPaths.ApiAuthorizationPrefix} component={ApiAuthorizationRoutes} />
         </Layout>
