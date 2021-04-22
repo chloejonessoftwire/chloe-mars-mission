@@ -45,5 +45,20 @@
     "numberofcamerasstars": "https://codeahoy.com/assets/images/compare/ratings/3_stars.png",
     "weight":"180 kg", 
     "weightstars": "https://codeahoy.com/assets/images/compare/ratings/4_stars.png"
+  },
+  "perseverance": {
+    "name": "Perseverance",
+    "imagesrc": "https://upload.wikimedia.org/wikipedia/commons/7/7d/PIA23764-MarsPerseveranceRover-ArtistConcept-20200305.jpg",
+    "launchdate": "30/07/2020",
+    "speed": "0.1mph",
+    "speedstars": "https://codeahoy.com/assets/images/compare/ratings/3_stars.png",
+    "size": "608 cubic feet",
+    "sizestars": "https://codeahoy.com/assets/images/compare/ratings/2_stars.png",
+    "lifespan": "Ongoing",
+    "lifespanstars": "https://codeahoy.com/assets/images/compare/ratings/0_stars.png",
+    "numberofcameras": 19,
+    "numberofcamerasstars": "https://codeahoy.com/assets/images/compare/ratings/5_stars.png",
+    "weight":"1,025 kg", 
+    "weightstars": "https://codeahoy.com/assets/images/compare/ratings/1_stars.png"
   }
 }
