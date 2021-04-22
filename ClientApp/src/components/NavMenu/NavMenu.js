@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { LoginMenu } from '../api-authorization/LoginMenu';
 
-import './NavMenu.css';
+import './NavMenu.scss';
 
 export class NavMenu extends Component {
   static displayName = NavMenu.name;
@@ -35,18 +35,38 @@ export class NavMenu extends Component {
                 <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
                 </NavItem>
-                <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/rovers">Rovers</NavLink>
-                </NavItem>
+                <UncontrolledDropdown nav inNavbar>
+                  <DropdownToggle nav caret tag={Link} to="/rovers" className="text-dark">
+                    Rovers
+                    </DropdownToggle>
+                  <DropdownMenu right>
+                  <DropdownItem tag={Link} to="/rovers">
+                      Compare Rovers
+                      </DropdownItem>
+                  <DropdownItem divider />
+                    <DropdownItem tag={Link} to="/rovers/curiosity">
+                      Curiosity
+                      </DropdownItem>
+                    <DropdownItem tag={Link} to="/rovers/opportunity">
+                      Opportunity
+                      </DropdownItem>
+                    <DropdownItem tag={Link} to="/rovers/spirit">
+                      Spirit
+                      </DropdownItem>
+                    <DropdownItem tag={Link} to="/rovers/perseverance">
+                      Perseverance
+                      </DropdownItem>
+                  </DropdownMenu>
+                </UncontrolledDropdown>
                 <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/news">News</NavLink>
                 </NavItem>
-                <NavItem>
+                {/* <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/counter">Counter</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/fetch-data">Fetch data</NavLink>
-                </NavItem>
+                </NavItem> */}
                 <LoginMenu>
                 </LoginMenu>
               </ul>
